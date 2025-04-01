@@ -1,10 +1,17 @@
 import { Navbar } from '@/components/Navbar/Navbar';
 import WorkCardGrid from '@components/WorkCardGrid/WorkCardGrid.tsx';
 import styles from './OurWork.module.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const OurWork = () => {
 	const [categoryActive, setCategory] = useState('Главная');
+
+	// Load from saved storage
+	useEffect(() => {
+		const savedActiveNavChoice = localStorage.getItem('activeNavTabChoice');
+		if (savedActiveNavChoice) setCategory(savedActiveNavChoice);
+		console.log("123" + savedActiveNavChoice);
+	}, [categoryActive]);
 
 	console.log('categoryActive', categoryActive);
 	return (

@@ -27,24 +27,42 @@ const cardData = [
 		tag: 'Оптимизация',
 		headIcon: '📱',
 	},
+	{
+		title: 'Мобильная оптимизация',
+		rating: 4.7,
+		description:
+			'Все наши проекты адаптированы для любых устройств, обеспечивая идеальный пользовательский опыт на любом экране.',
+		tag: 'Оптимизация',
+		headIcon: '📱',
+	},
+	{
+		title: 'Мобильная оптимизация',
+		rating: 4.7,
+		description:
+			'Все наши проекты адаптированы для любых устройств, обеспечивая идеальный пользовательский опыт на любом экране.',
+		tag: 'Оптимизация',
+		headIcon: '📱',
+	},
 ];
 
 export const Solutions = () => {
 	return (
-		<div className={styles.solutions}>
-			<h1>Инновационные решения для вашего бизнеса</h1>
+		<div className={styles.maxContainer}>
+			<div className={styles.solutions}>
+				<h1>Инновационные решения для вашего бизнеса</h1>
 
-			<div className={clsx(styles.solutions, styles.solutions_cards)}>
-				{cardData.map((card, index) => (
-					<Card
-						key={index}
-						title={card.title}
-						rating={card.rating}
-						description={card.description}
-						tag={card.tag}
-						headIcon={card.headIcon}
-					/>
-				))}
+				<div className={clsx(styles.solutions, styles.solutions_cards)}>
+					{cardData.map((card, index) => (
+						<Card
+							key={index}
+							title={card.title}
+							rating={card.rating}
+							description={card.description}
+							tag={card.tag}
+							headIcon={card.headIcon}
+						/>
+					))}
+				</div>
 			</div>
 		</div>
 	);

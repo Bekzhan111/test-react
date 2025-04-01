@@ -34,28 +34,30 @@ const Header: React.FC<HeaderProps> = ({ logo = 'CompanyName' }) => {
 	}, [active]);
 
 	return (
-		<header className={styles.header}>
-			<div className={styles.logo}>{logo}</div>
-			<nav>
-				<ul className={styles.nav__menu}>
-					{navLinks.map((link) => (
-						<li key={link.name}>
-							<a
-								href={link.href}
-								className={clsx(styles.nav__item, {
-									[styles.active]: active === link.name,
-								})}
-								onClick={() => {
-									setActive(link.name);
-								}}
-							>
-								{link.name}
-							</a>
-						</li>
-					))}
-				</ul>
-			</nav>
-		</header>
+		<div className={styles.maxContainer}>
+			<header className={styles.header}>
+				<div className={styles.logo}>{logo}</div>
+				<nav>
+					<ul className={styles.nav__menu}>
+						{navLinks.map((link) => (
+							<li key={link.name}>
+								<a
+									href={link.href}
+									className={clsx(styles.nav__item, {
+										[styles.active]: active === link.name,
+									})}
+									onClick={() => {
+										setActive(link.name);
+									}}
+								>
+									{link.name}
+								</a>
+							</li>
+						))}
+					</ul>
+				</nav>
+			</header>
+		</div>
 	);
 };
 

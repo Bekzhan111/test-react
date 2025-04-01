@@ -1,12 +1,22 @@
 @import "../../assets/scss/base/variables";
 
+
+
+.maxContainer {
+	display: flex;
+	justify-content: center;
+	background-color: $light;
+}
+
 .solutions {
+	max-width: 1200px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 50px 0;
-	background-color: $light;
 	text-align: center;
+
+
 	h1{
 		margin-bottom: 70px;
 		padding: 0 20px;
@@ -15,8 +25,11 @@
 	&_cards {
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
 		column-gap: 22px;
+		row-gap: 65px;
 		padding: 0;
+		flex-wrap: wrap;
 
 		@media (max-width: $width-sm){
 			display: flex;

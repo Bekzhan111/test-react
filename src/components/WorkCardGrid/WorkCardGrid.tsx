@@ -39,11 +39,13 @@ const WorkCardGrid: React.FC<WorkCardGridProps> = ({ category }) => {
 		console.log(cards);
 	}, [category]);
 	return (
-		<div className={styles.grid}>
-			{cards.map((card) => (
-				<WorkCard key={card.id} {...card} />
-			))}
-		</div>
+		<center>
+			<div className={styles.grid}>
+				{cards.map((card) => (
+					<WorkCard key={card.id} {...card} />
+				))}
+			</div>
+		</center>
 	);
 };
 
