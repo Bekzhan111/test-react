@@ -1,0 +1,62 @@
+@import "../../assets/scss/base/variables";
+
+.header {
+	background-color: $dark;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 40px;
+	height: 50px;
+	color: $white;
+}
+
+.logo {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.nav__menu {
+	display: flex;
+	list-style: none;
+	gap: 25px;
+	padding: 0;
+	margin: 0;
+
+	@media (max-width: $width-sm) {
+		display: none;
+	}
+}
+
+.nav__item {
+	color: $white;
+	text-decoration: none;
+	padding-bottom: 5px;
+	position: relative;
+	transition: all 0.3s ease;
+	outline: none;
+
+	&:hover::after
+	{
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -12px;
+		height: 2px;
+		width: 100%;
+		background-color: $accent;
+	}
+}
+
+.active {
+	color: $white;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -12px;
+		height: 2px;
+		width: 100%;
+		background-color: $accent;
+	}
+}

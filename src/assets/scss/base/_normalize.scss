@@ -1,20 +1,9 @@
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-
-//
-//  1. Set default font family to sans-serif.
-//  2. Prevent iOS and IE text size adjust after device orientation change,
-//     without disabling telegramUser zoom.
-//
 
 html {
 	font-family: sans-serif;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
-
-//
-//  Remove default margin.
-//
 
 body {
 	margin: 0;
